@@ -84,7 +84,7 @@ class ManageFeedInputFilter extends InputFilter
 
     protected function _addRequiredFields()
     {
-        foreach ($this->_optionalFields as $fieldName) {
+        foreach ($this->_requiredFields as $fieldName) {
             $input = new Input($fieldName);
             $input->setRequired(true)
                 ->setAllowEmpty(true)
