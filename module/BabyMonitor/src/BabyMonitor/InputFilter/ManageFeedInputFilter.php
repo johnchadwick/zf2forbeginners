@@ -133,7 +133,8 @@ class ManageFeedInputFilter extends InputFilter
         $baseInputFilterChain->attach(new HtmlEntities())
             ->attach(new StringTrim())
             ->attach(new StripNewlines())
-            ->attach(new StripTags());
+            ->attach(new StripTags())
+            ->attach(new Null(array('string')));
 
         return $baseInputFilterChain;
     }
